@@ -1,3 +1,6 @@
+html, body {
+	height: 100%;
+}
 .topbar {
 	padding: 0;
 }
@@ -71,6 +74,8 @@ ul.topbar > div > li {
 #square {
 	display: inline-block;
 	box-sizing: border-box;
+	background: linear-gradient(to bottom right, #FF4019, #AB0404);
+	border: 1px solid black;
 	width: 60%;
 	height: 60%;
 	margin: auto;
@@ -78,19 +83,20 @@ ul.topbar > div > li {
 }
 #bounce {
 	margin-bottom: 15%;
+	border-radius: 4px;
 }
 .initialmove {
 	box-sizing: border-box;
-	border: 1px solid black;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: red;
 	position: relative;
 	animation-name: mymove;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
-.initialmove {animation-timing-function: linear;}
+.initialmove {
+	animation-timing-function: linear;
+}
 
 @keyframes mymove {
     from {left: -750px;}
@@ -103,17 +109,16 @@ ul.topbar > div > li {
 	border: 1px solid black;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: red;
 	position: relative;
 	animation-name: mybounce;
 	animation-duration: 0.5s;
-	animation-iteration-count: 2;
+	animation-iteration-count: 3;
 }
 .verticalbounce {animation-timing-function: linear;}
 
 @keyframes mybounce {
     from {top: 0px;}
-    50% {top: -15px;}
+    50% {top: -25px;}
     to {top: 0px;}
 }
 .allcentered {
@@ -128,7 +133,4 @@ ul.topbar > div > li {
     right: 0;
     margin: auto;
 	position: absolute;
-}
-html, body {
-	height: 100%;
 }
