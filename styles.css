@@ -1,6 +1,7 @@
 html, body {
 	height: 100%;
 }
+/*menu elements style*/
 .topbar {
 	padding: 0;
 }
@@ -13,6 +14,7 @@ ul.topbar > div > li {
 .topbar > div > li:hover {
 	opacity: 1;
 }
+/*grid system container*/
 .centered {
 	padding: 1%;
 	padding-right: 3%;
@@ -20,6 +22,10 @@ ul.topbar > div > li {
 	text-align: center;
 	margin: auto;
 }
+#topbar-button {
+	float: right;
+}
+/*custom grid system based on a 7 columns grid (only column-1 used on index.html)*/
 .column-1 {
 	position: relative;
 	float: left;
@@ -62,15 +68,28 @@ ul.topbar > div > li {
 	box-sizing: border-box;
 	width: 99.99999999997%;
 }
+/*Empty grids before the content*/
 .offset-1 {
 	margin-left: 14.28571428571%;
 }
 .offset-3 {
 	margin-left: 42.85714285713%;
 }
-#topbar-button {
-	float: right;
+/*button+square block centering*/
+.allcentered {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	width: 250px;
+	height: 250px;
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	position: absolute;
 }
+/*definition of button+square style*/
 #square {
 	display: inline-block;
 	box-sizing: border-box;
@@ -85,6 +104,7 @@ ul.topbar > div > li {
 	margin-bottom: 15%;
 	border-radius: 4px;
 }
+/*initial animation*/
 .initialmove {
 	box-sizing: border-box;
 	margin-left: auto;
@@ -99,9 +119,14 @@ ul.topbar > div > li {
 }
 
 @keyframes mymove {
-    from {left: -750px;}
-    to {left: 0px;}
+    from {
+    	left: -750px;
+    }
+    to {
+    	left: 0px;
+    }
 }
+/*bounce animation*/
 .verticalbounce {
 	box-sizing: border-box;
 	height: 120px;
@@ -117,20 +142,13 @@ ul.topbar > div > li {
 .verticalbounce {animation-timing-function: linear;}
 
 @keyframes mybounce {
-    from {top: 0px;}
-    50% {top: -25px;}
-    to {top: 0px;}
-}
-.allcentered {
-	text-align: center;
-	display: table-cell;
-	vertical-align: middle;
-	width: 250px;
-	height: 250px;
-	top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-	position: absolute;
+    from {
+    	top: 0px;
+    }
+    50% {
+    	top: -25px;
+    }
+    to {
+    	top: 0px;
+    }
 }
